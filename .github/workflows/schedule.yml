@@ -30,9 +30,9 @@ jobs:
       # 配置git
       - name: Config git
         run: |
-          git config --local user.email "ations@github.com"
-          git config --local user.name "github"
-          git remote set-url origin "https://${{ github.actor }}:${{ github.token }}@github.com/${{ github.repository }}"
+          git config --local user.email "2071916845@qq.com"
+          git config --local user.name "it985"
+          git remote set-url origin https://${{ github.actor }}:${{ secrets.douyinhothub }}@github.com/${{ github.repository }}
           git pull --rebase
       # 运行
       - name: Run python
@@ -42,5 +42,5 @@ jobs:
       - name: Update repo
         run: |
           git add .
-          git commit -m "auto update"
+          git commit -m "auto update douyinhothub"
           git push -u origin main
